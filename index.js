@@ -2,19 +2,27 @@ function generateStrongPassword(length = 12) {
     const allowedPasswordCharacters =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
 
-    const strongPassword = Array
-        .from(
-            { length },
-            () => {
-                const randomAllowedPasswordCharacterIndex =
-                    Math.floor(Math.random() * allowedPasswordCharacters.length);
-                const randomAllowedPasswordCharacter =
-                    allowedPasswordCharacters.charAt(randomAllowedPasswordCharacterIndex);
+    if (length < 8) {
+        length = 8;
+    }
 
-                return randomAllowedPasswordCharacter;
-            }
-        )
-        .join('');
+    let strongPassword = "";
+
+    do {
+        strongPassword = Array
+            .from(
+                { length },
+                () => {
+                    const randomAllowedPasswordCharacterIndex =
+                        Math.floor(Math.random() * allowedPasswordCharacters.length);
+                    const randomAllowedPasswordCharacter =
+                        allowedPasswordCharacters.charAt(randomAllowedPasswordCharacterIndex);
+
+                    return randomAllowedPasswordCharacter;
+                }
+            )
+            .join('');
+    } while (!isStrongPassword(strongPassword));
 
     return strongPassword;
 }
