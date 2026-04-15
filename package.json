@@ -1,6 +1,6 @@
 {
   "name": "@kyrillos1212/password-utilities",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small JavaScript library for generating and validating strong passwords.",
   "main": "index.js",
   "scripts": {
