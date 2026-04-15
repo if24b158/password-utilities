@@ -16,4 +16,8 @@ describe("Password Utilities", () => {
         const password = generateStrongPassword(12);
         expect(password).toHaveLength(12);
     });
+    test("generateStrongPassword should always return a strong password", () => {
+        const password = generateStrongPassword(12);
+        expect(isStrongPassword(password)).toBe(true);
+    });
 });
