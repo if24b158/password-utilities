@@ -1,15 +1,14 @@
 {
-  "name": "password-utilities",
+  "name": "@if24b158/password-utilities",
   "version": "1.0.0",
+  "description": "A small JavaScript library for generating and validating strong passwords.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "jest": "^30.3.0"
+  "author": "Kyrillos Abdalla",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   }
 }
