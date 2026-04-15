@@ -26,7 +26,7 @@ console.log(isStrongPassword("pC%mD8TpCKn2")); // true
 ### API
 generateStrongPassword(length = 12)
 
-Generates a random password with the requested length.
+Generates a random strong password with the requested length and ensures that it passes the strength validation rules.
 
 isStrongPassword(password)
 
